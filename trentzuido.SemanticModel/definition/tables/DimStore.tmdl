@@ -1,0 +1,113 @@
+table DimStore
+	lineageTag: 45012f96-8554-4db6-b83b-f3161de41893
+
+	column StoreID
+		dataType: string
+		lineageTag: 5bd4bb7e-0cd6-4ed8-ab73-918f22693762
+		summarizeBy: none
+		sourceColumn: StoreID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreName
+		dataType: string
+		lineageTag: 387f419a-a4c4-487a-b6d5-da361bcd8d73
+		summarizeBy: none
+		sourceColumn: StoreName
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 8e352dfd-ae9c-443c-af89-f60921972035
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: df769b4e-485c-4964-b12b-737bca24ee7d
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: e3c63389-2178-453c-a71e-37ac01e6aa71
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pincode
+		dataType: int64
+		formatString: 0
+		lineageTag: db9b6d9f-7b47-4ae4-abc2-35834c1fd2ca
+		summarizeBy: sum
+		sourceColumn: Pincode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: a1e4020a-9f01-4893-a77d-2c881751494b
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreType
+		dataType: string
+		lineageTag: a0ee8243-448b-44e9-84c9-2967a92675fb
+		summarizeBy: none
+		sourceColumn: StoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreAreaSqft
+		dataType: int64
+		formatString: 0
+		lineageTag: 192dfdad-142a-4a79-94ee-0f89aa9fbdc7
+		summarizeBy: sum
+		sourceColumn: StoreAreaSqft
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpeningDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1a852cb8-554d-45ce-b543-fd7ffdf5ce11
+		summarizeBy: none
+		sourceColumn: OpeningDate
+
+		variation Variation
+			isDefault
+			relationship: 6c0861bc-8528-42f2-8a50-38024001b7df
+			defaultHierarchy: LocalDateTable_1a219ab5-2fac-4f0b-8807-c07f506c9037.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column StoreManager
+		dataType: string
+		lineageTag: 904dd3a5-c8ac-4dea-8c86-5e5f00a161dd
+		summarizeBy: none
+		sourceColumn: StoreManager
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimStore = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\program\Downloads\zudio_pro\DimStore.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"StoreID", type text}, {"StoreName", type text}, {"City", type text}, {"State", type text}, {"Region", type text}, {"Pincode", Int64.Type}, {"Address", type text}, {"StoreType", type text}, {"StoreAreaSqft", Int64.Type}, {"OpeningDate", type date}, {"StoreManager", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

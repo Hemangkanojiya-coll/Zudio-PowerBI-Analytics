@@ -1,0 +1,54 @@
+table Dimpayment
+	lineageTag: b0788413-9928-4e11-9460-60efc1c21af9
+
+	column PaymentID
+		dataType: string
+		lineageTag: fed1ccd4-0267-444a-96bf-f9f229e79186
+		summarizeBy: none
+		sourceColumn: PaymentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentMode
+		dataType: string
+		lineageTag: 3c51107a-c6d6-4cf9-a927-68d152c926e1
+		summarizeBy: none
+		sourceColumn: PaymentMode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Application
+		dataType: string
+		lineageTag: 8c600d80-daff-42d2-8dbb-059da56c6f72
+		summarizeBy: none
+		sourceColumn: Application
+
+		annotation SummarizationSetBy = Automatic
+
+	column CardType
+		dataType: string
+		lineageTag: 174edc35-ee3e-4d7a-89ab-cd8889b28d17
+		summarizeBy: none
+		sourceColumn: CardType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CardBank
+		dataType: string
+		lineageTag: f104ebe9-e06c-4b12-9929-fd30a2545fc3
+		summarizeBy: none
+		sourceColumn: CardBank
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dimpayment = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("fdJfC8IgEADwryJ7Kgjaav173NZfqCVRvUQPRx1NahZqUN++tZW1zXrx0PuJp+dmY9GZbTtWzQpARkkI615u3NYy0kjmKzpJxhGFu5E0NaHRmSNFo3I/Cu4qNpqWNnMVoTCadlqz2OvkmklIwrg/DIgP/KhlpyhnIBWKXbZU9t2iX1yzK5dp70cR3o3JnHTsv0WUvVP0XoyC7YCTwe0iUErT0ntz49cNlqCAhHgllYU/TQ+s6k3P9s35ifG0b6jSNOMH0+s77jf2Qzo1qmcfA4F7pkh4Vvn/8JLbBw==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [PaymentID = _t, PaymentMode = _t, Application = _t, CardType = _t, CardBank = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"PaymentID", type text}, {"PaymentMode", type text}, {"Application", type text}, {"CardType", type text}, {"CardBank", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

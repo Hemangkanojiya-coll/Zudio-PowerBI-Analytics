@@ -1,0 +1,58 @@
+relationship 8cdcd0ff-b71a-4269-9192-512962288599
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimCustomer.SignupDate
+	toColumn: LocalDateTable_cd2eead0-2f3f-4525-bff5-d281bd92d855.Date
+
+relationship dd83683a-a41b-471b-aa16-9f557eb9fc6a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimCustomer.FirstPurchaseDate
+	toColumn: LocalDateTable_4bff328c-bb35-440d-9e7f-2bb2bf6a6df1.Date
+
+relationship 8854de4e-08a7-4669-9dbd-9d0e6003c897
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimCustomer.LastPurchaseDate
+	toColumn: LocalDateTable_dc18d9f6-1518-40e3-9432-4df9797dade4.Date
+
+relationship 8829f4ed-f74e-4cbc-88a6-7c64811f275d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.Date
+	toColumn: LocalDateTable_72fe9a37-1d41-4bd0-9ac9-363f5909d9da.Date
+
+relationship 6c0861bc-8528-42f2-8a50-38024001b7df
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimStore.OpeningDate
+	toColumn: LocalDateTable_1a219ab5-2fac-4f0b-8807-c07f506c9037.Date
+
+relationship 58eb9428-dc34-4cd4-93ff-2dadd2ce5f05
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactExchange.ExchangeDate
+	toColumn: LocalDateTable_d1c4aadf-242c-43c7-8e7b-1ad68cf92711.Date
+
+relationship AutoDetected_9a5321f9-3a23-4eb0-8505-92b872a76e6a
+	fromColumn: FactExchange.CustomerID
+	toColumn: DimCustomer.CustomerID
+
+relationship AutoDetected_2464f0a9-9333-4aa6-8b49-277b3188f473
+	fromColumn: FactExchange.StoreID
+	toColumn: DimStore.StoreID
+
+relationship AutoDetected_03c47e63-7702-48e4-9740-c4acf38bbbb8
+	fromColumn: FactSales.CustomerID
+	toColumn: DimCustomer.CustomerID
+
+relationship AutoDetected_2ba5338c-fe8c-4138-b27c-bdd30cc13cf7
+	fromColumn: FactSales.ProductID
+	toColumn: DimProduct.ProductID
+
+relationship AutoDetected_3096d062-50a2-4edc-ba2f-7bd6b80ac0c7
+	fromColumn: FactSales.StoreID
+	toColumn: DimStore.StoreID
+
+relationship AutoDetected_233ff631-aa2d-44f5-99cf-a9d950d8ca2e
+	fromColumn: FactSales.PaymentID
+	toColumn: Dimpayment.PaymentID
+
+relationship ba3efd74-2668-1cca-00d7-59061a06742b
+	fromColumn: FactSales.Date
+	toColumn: DimDate.Date
+

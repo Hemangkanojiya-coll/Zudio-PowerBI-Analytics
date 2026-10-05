@@ -1,0 +1,108 @@
+table DimProduct
+	lineageTag: 59a7a3d6-72dc-48bf-93c1-1401cb193c32
+
+	column ProductID
+		dataType: string
+		lineageTag: a756f4b0-c396-4fda-8d8b-9a8abb60afeb
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: ffe76f66-7ca5-4b8c-be82-f65ae167e78a
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: d0155de6-1e92-4986-b006-66d281d1e3c0
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategory
+		dataType: string
+		lineageTag: cb4ef3a7-aefc-457e-a140-7258f62a7653
+		summarizeBy: none
+		sourceColumn: SubCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: cb33fa6d-a5e7-495c-9196-dccadb209f73
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 6301ef55-0965-4a58-805b-9ed14a7a8136
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column MRP
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ddd959b-2923-428d-b4c5-70fa1d6ab2cd
+		summarizeBy: none
+		sourceColumn: MRP
+
+		annotation SummarizationSetBy = Automatic
+
+	column CostPrice
+		dataType: double
+		lineageTag: 14957ada-d1cf-412b-8c94-bebf9f65bfd2
+		summarizeBy: none
+		sourceColumn: CostPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Size
+		dataType: string
+		lineageTag: e5657887-9af3-4650-95a2-dea80b9236ca
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		lineageTag: 439052c8-ef48-41ee-933c-987950f77091
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column GSTRate
+		dataType: double
+		lineageTag: 7597d522-2f91-4b78-ba5a-c9f9b4b5ac31
+		summarizeBy: none
+		sourceColumn: GSTRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition DimProduct = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\program\Downloads\zudio_pro\DimProduct.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProductID", type text}, {"ProductName", type text}, {"Category", type text}, {"SubCategory", type text}, {"Brand", type text}, {"Gender", type text}, {"MRP", Int64.Type}, {"CostPrice", type number}, {"Size", type text}, {"Color", type text}, {"GSTRate", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,344 @@
+ProductID,ProductName,Category,SubCategory,Brand,Gender,MRP,CostPrice,Size,Color,GSTRate
+P0001,T-Shirt Slim Fit,Men,T-Shirt,Zudio Active,Men,599,311.15,XXL,Black,0.05
+P0002,T-Shirt Printed,Men,T-Shirt,Zudio,Men,399,178.18,XL,Black,0.05
+P0003,T-Shirt Regular Fit,Men,T-Shirt,Zudio Active,Men,149,61.31,S,Grey,0.05
+P0004,T-Shirt Printed,Men,T-Shirt,Zudio,Men,599,280.01,XXL,Red,0.05
+P0005,T-Shirt Printed,Men,T-Shirt,Zudio Home,Men,399,189.61,S,Pink,0.05
+P0006,T-Shirt Regular Fit,Men,T-Shirt,Zudio,Men,199,94.66,M,Black,0.05
+P0007,T-Shirt Solid,Men,T-Shirt,Zudio Home,Men,299,164.05,XXL,Blue,0.05
+P0008,T-Shirt Regular Fit,Men,T-Shirt,Zudio Active,Men,399,182.79,L,Black,0.05
+P0009,T-Shirt Solid,Men,T-Shirt,Zudio Active,Men,1499,614.42,S,Grey,0.12
+P0010,T-Shirt Regular Fit,Men,T-Shirt,Zudio Basics,Men,349,157.05,XXL,Blue,0.05
+P0011,T-Shirt Regular Fit,Men,T-Shirt,Zudio Home,Men,399,167.32,Free Size,White,0.05
+P0012,Shirt Slim Fit,Men,Shirt,Zudio Active,Men,699,364.86,Free Size,White,0.05
+P0013,Shirt Solid,Men,Shirt,Zudio Home,Men,999,475.8,S,Green,0.05
+P0014,Shirt Classic,Men,Shirt,Zudio Basics,Men,349,157.49,XL,Red,0.05
+P0015,Shirt Classic,Men,Shirt,Zudio Basics,Men,299,123.06,S,Black,0.05
+P0016,Shirt Regular Fit,Men,Shirt,Zudio Basics,Men,999,489.1,M,Blue,0.05
+P0017,Shirt Solid,Men,Shirt,Zudio Basics,Men,249,126.54,S,Grey,0.05
+P0018,Shirt Solid,Men,Shirt,Zudio Basics,Men,399,217.63,XXL,Beige,0.05
+P0019,Shirt Solid,Men,Shirt,Zudio Home,Men,1499,652.22,M,Beige,0.12
+P0020,Shirt Slim Fit,Men,Shirt,Zudio Basics,Men,1499,682.31,XXL,Pink,0.12
+P0021,Shirt Regular Fit,Men,Shirt,Zudio Home,Men,599,284.79,XL,Blue,0.05
+P0022,Shirt Printed,Men,Shirt,Zudio Basics,Men,299,158.75,S,Pink,0.05
+P0023,Shirt Printed,Men,Shirt,Zudio,Men,399,202.18,XXL,White,0.05
+P0024,Shirt Basic,Men,Shirt,Zudio Basics,Men,349,153.88,XXL,Blue,0.05
+P0025,Jeans Classic,Men,Jeans,Zudio Home,Men,199,106.01,S,Grey,0.05
+P0026,Jeans Slim Fit,Men,Jeans,Zudio Active,Men,149,64.87,S,Green,0.05
+P0027,Jeans Basic,Men,Jeans,Zudio Active,Men,299,161.35,Free Size,Green,0.05
+P0028,Jeans Classic,Men,Jeans,Zudio Basics,Men,1499,608.21,XL,Blue,0.12
+P0029,Jeans Solid,Men,Jeans,Zudio Home,Men,1499,700.47,S,White,0.12
+P0030,Jeans Regular Fit,Men,Jeans,Zudio Basics,Men,149,78.26,XXL,Grey,0.05
+P0031,Jeans Regular Fit,Men,Jeans,Zudio Basics,Men,199,88.59,S,Red,0.05
+P0032,Jeans Solid,Men,Jeans,Zudio Home,Men,499,204.3,XL,Black,0.05
+P0033,Jeans Printed,Men,Jeans,Zudio Basics,Men,999,507.27,L,Grey,0.05
+P0034,Jeans Printed,Men,Jeans,Zudio Active,Men,149,64.98,XL,Blue,0.05
+P0035,Jeans Solid,Men,Jeans,Zudio,Men,999,478.04,L,White,0.05
+P0036,Jeans Printed,Men,Jeans,Zudio,Men,699,320.54,XL,Black,0.05
+P0037,Jeans Slim Fit,Men,Jeans,Zudio Active,Men,999,437.61,S,Green,0.05
+P0038,Jeans Basic,Men,Jeans,Zudio Active,Men,1499,653.82,Free Size,White,0.12
+P0039,Trousers Basic,Men,Trousers,Zudio Active,Men,249,119.99,Free Size,Blue,0.05
+P0040,Trousers Solid,Men,Trousers,Zudio Home,Men,1499,820.14,XL,Blue,0.12
+P0041,Trousers Classic,Men,Trousers,Zudio,Men,1499,760.6,XL,Black,0.12
+P0042,Trousers Classic,Men,Trousers,Zudio,Men,349,181.01,S,Green,0.05
+P0043,Trousers Printed,Men,Trousers,Zudio Home,Men,349,191.38,XXL,Pink,0.05
+P0044,Trousers Basic,Men,Trousers,Zudio Basics,Men,349,154.58,S,Green,0.05
+P0045,Trousers Basic,Men,Trousers,Zudio Active,Men,349,162.47,XL,Pink,0.05
+P0046,Trousers Regular Fit,Men,Trousers,Zudio Basics,Men,499,236.74,XL,Green,0.05
+P0047,Trousers Printed,Men,Trousers,Zudio Active,Men,1499,779.74,Free Size,Grey,0.12
+P0048,Trousers Slim Fit,Men,Trousers,Zudio Basics,Men,199,95.88,L,White,0.05
+P0049,Trousers Regular Fit,Men,Trousers,Zudio Active,Men,199,88.75,XXL,Grey,0.05
+P0050,Trousers Solid,Men,Trousers,Zudio Home,Men,249,112.73,S,Green,0.05
+P0051,Trousers Slim Fit,Men,Trousers,Zudio Active,Men,799,396.24,S,White,0.05
+P0052,Jacket Printed,Men,Jacket,Zudio Basics,Men,399,216.62,M,Pink,0.05
+P0053,Jacket Classic,Men,Jacket,Zudio,Men,149,64.87,Free Size,Green,0.05
+P0054,Jacket Slim Fit,Men,Jacket,Zudio,Men,399,195.81,Free Size,Pink,0.05
+P0055,Jacket Regular Fit,Men,Jacket,Zudio Home,Men,399,205.27,XXL,Blue,0.05
+P0056,Jacket Regular Fit,Men,Jacket,Zudio Home,Men,699,312.56,L,Red,0.05
+P0057,Jacket Basic,Men,Jacket,Zudio Basics,Men,199,94.5,XL,White,0.05
+P0058,Jacket Regular Fit,Men,Jacket,Zudio Home,Men,349,150.83,XXL,Beige,0.05
+P0059,Jacket Slim Fit,Men,Jacket,Zudio Basics,Men,1199,501.66,S,Pink,0.12
+P0060,Jacket Solid,Men,Jacket,Zudio Home,Men,249,136.85,Free Size,Green,0.05
+P0061,Jacket Regular Fit,Men,Jacket,Zudio,Men,999,482.02,L,Beige,0.05
+P0062,Jacket Solid,Men,Jacket,Zudio Basics,Men,249,129.24,XXL,Red,0.05
+P0063,Jacket Classic,Men,Jacket,Zudio Basics,Men,199,86.67,XL,Black,0.05
+P0064,Jacket Printed,Men,Jacket,Zudio Active,Men,399,187.57,XXL,Blue,0.05
+P0065,Jacket Basic,Men,Jacket,Zudio,Men,799,356.67,Free Size,Pink,0.05
+P0066,Shorts Slim Fit,Men,Shorts,Zudio,Men,1499,627.78,L,White,0.12
+P0067,Shorts Slim Fit,Men,Shorts,Zudio Active,Men,599,251.13,XXL,Blue,0.05
+P0068,Shorts Classic,Men,Shorts,Zudio Home,Men,1499,712.67,S,White,0.12
+P0069,Shorts Classic,Men,Shorts,Zudio Active,Men,699,296.86,L,Red,0.05
+P0070,Shorts Printed,Men,Shorts,Zudio Active,Men,399,210.23,L,Red,0.05
+P0071,Shorts Printed,Men,Shorts,Zudio Active,Men,999,418.36,L,White,0.05
+P0072,Shorts Solid,Men,Shorts,Zudio Basics,Men,699,341.65,XXL,Blue,0.05
+P0073,Shorts Solid,Men,Shorts,Zudio Active,Men,249,131.07,XXL,Black,0.05
+P0074,Shorts Basic,Men,Shorts,Zudio,Men,149,80.8,XXL,Beige,0.05
+P0075,Shorts Classic,Men,Shorts,Zudio Home,Men,999,492.22,S,Pink,0.05
+P0076,Shorts Printed,Men,Shorts,Zudio Active,Men,999,495.79,L,Pink,0.05
+P0077,Shorts Solid,Men,Shorts,Zudio Home,Men,299,132.94,S,Black,0.05
+P0078,Shorts Slim Fit,Men,Shorts,Zudio Home,Men,249,117.69,M,Green,0.05
+P0079,Shorts Classic,Men,Shorts,Zudio Active,Men,799,422.85,L,Green,0.05
+P0080,Kurti Regular Fit,Women,Kurti,Zudio,Women,249,111.52,XL,White,0.05
+P0081,Kurti Slim Fit,Women,Kurti,Zudio Basics,Women,349,146.97,S,Beige,0.05
+P0082,Kurti Printed,Women,Kurti,Zudio Home,Women,499,218.18,M,Green,0.05
+P0083,Kurti Solid,Women,Kurti,Zudio Active,Women,799,342.35,M,Pink,0.05
+P0084,Kurti Slim Fit,Women,Kurti,Zudio Home,Women,699,371.77,XL,Black,0.05
+P0085,Kurti Slim Fit,Women,Kurti,Zudio Home,Women,199,108.46,M,Green,0.05
+P0086,Kurti Basic,Women,Kurti,Zudio Active,Women,149,70.66,Free Size,Pink,0.05
+P0087,Kurti Printed,Women,Kurti,Zudio,Women,349,183.95,XL,Blue,0.05
+P0088,Kurti Solid,Women,Kurti,Zudio Active,Women,349,179.59,L,Black,0.05
+P0089,Kurti Basic,Women,Kurti,Zudio Basics,Women,499,226.73,L,White,0.05
+P0090,Kurti Printed,Women,Kurti,Zudio Home,Women,499,256.82,L,White,0.05
+P0091,Kurti Basic,Women,Kurti,Zudio Home,Women,249,113.54,L,Green,0.05
+P0092,Kurti Classic,Women,Kurti,Zudio Basics,Women,1499,735.06,XL,Black,0.12
+P0093,Kurti Basic,Women,Kurti,Zudio Basics,Women,149,75.55,XL,Pink,0.05
+P0094,Top Printed,Women,Top,Zudio Basics,Women,799,358.91,XXL,Green,0.05
+P0095,Top Slim Fit,Women,Top,Zudio Active,Women,249,121.78,XXL,Pink,0.05
+P0096,Top Printed,Women,Top,Zudio Active,Women,1199,565.01,S,Green,0.12
+P0097,Top Solid,Women,Top,Zudio,Women,399,218.25,XXL,Beige,0.05
+P0098,Top Solid,Women,Top,Zudio,Women,1499,733.82,L,Red,0.12
+P0099,Top Basic,Women,Top,Zudio Home,Women,1199,510.27,Free Size,Grey,0.12
+P0100,Top Solid,Women,Top,Zudio Basics,Women,249,100.78,Free Size,White,0.05
+P0101,Top Basic,Women,Top,Zudio Home,Women,299,133.67,M,Grey,0.05
+P0102,Top Classic,Women,Top,Zudio Home,Women,1199,569.85,XXL,Pink,0.12
+P0103,Top Solid,Women,Top,Zudio,Women,1199,606.53,XXL,Red,0.12
+P0104,Top Regular Fit,Women,Top,Zudio Home,Women,699,334.7,L,Blue,0.05
+P0105,Top Printed,Women,Top,Zudio Active,Women,599,288.68,Free Size,Beige,0.05
+P0106,Dress Classic,Women,Dress,Zudio Active,Women,299,144.63,M,Beige,0.05
+P0107,Dress Regular Fit,Women,Dress,Zudio Basics,Women,1499,754.8,XL,Green,0.12
+P0108,Dress Regular Fit,Women,Dress,Zudio Active,Women,599,265.46,XXL,Grey,0.05
+P0109,Dress Regular Fit,Women,Dress,Zudio Basics,Women,499,221.34,L,White,0.05
+P0110,Dress Slim Fit,Women,Dress,Zudio Active,Women,399,204.33,M,Red,0.05
+P0111,Dress Regular Fit,Women,Dress,Zudio Active,Women,699,293.99,XXL,Red,0.05
+P0112,Dress Basic,Women,Dress,Zudio Basics,Women,299,148.21,S,White,0.05
+P0113,Dress Regular Fit,Women,Dress,Zudio Home,Women,499,207.13,M,Black,0.05
+P0114,Dress Classic,Women,Dress,Zudio Home,Women,699,348.06,XL,Pink,0.05
+P0115,Dress Classic,Women,Dress,Zudio Active,Women,999,447.73,Free Size,Black,0.05
+P0116,Dress Basic,Women,Dress,Zudio Basics,Women,1499,719.93,Free Size,Black,0.12
+P0117,Dress Slim Fit,Women,Dress,Zudio Basics,Women,249,134.48,S,Grey,0.05
+P0118,Dress Slim Fit,Women,Dress,Zudio Basics,Women,1499,810.2,L,Black,0.12
+P0119,Dress Regular Fit,Women,Dress,Zudio,Women,149,80.35,L,Beige,0.05
+P0120,Leggings Printed,Women,Leggings,Zudio Home,Women,999,532.86,M,Pink,0.05
+P0121,Leggings Classic,Women,Leggings,Zudio,Women,349,156.91,Free Size,Pink,0.05
+P0122,Leggings Regular Fit,Women,Leggings,Zudio Basics,Women,999,401.71,L,Beige,0.05
+P0123,Leggings Solid,Women,Leggings,Zudio Basics,Women,799,340.63,Free Size,Grey,0.05
+P0124,Leggings Printed,Women,Leggings,Zudio Active,Women,499,206.09,Free Size,White,0.05
+P0125,Leggings Classic,Women,Leggings,Zudio Home,Women,249,111.69,M,Black,0.05
+P0126,Leggings Slim Fit,Women,Leggings,Zudio Basics,Women,349,162.99,L,Green,0.05
+P0127,Leggings Printed,Women,Leggings,Zudio,Women,349,153.29,L,Red,0.05
+P0128,Leggings Solid,Women,Leggings,Zudio,Women,149,70.0,M,Grey,0.05
+P0129,Leggings Printed,Women,Leggings,Zudio Active,Women,999,503.04,Free Size,Beige,0.05
+P0130,Leggings Printed,Women,Leggings,Zudio Basics,Women,399,172.71,M,Pink,0.05
+P0131,Leggings Slim Fit,Women,Leggings,Zudio Active,Women,249,115.13,XXL,Pink,0.05
+P0132,Leggings Printed,Women,Leggings,Zudio Basics,Women,1499,770.9,Free Size,White,0.12
+P0133,Leggings Slim Fit,Women,Leggings,Zudio Active,Women,699,287.79,XXL,White,0.05
+P0134,Saree Printed,Women,Saree,Zudio Basics,Women,699,339.65,M,Blue,0.05
+P0135,Saree Printed,Women,Saree,Zudio Home,Women,399,166.56,M,Pink,0.05
+P0136,Saree Printed,Women,Saree,Zudio Home,Women,199,103.74,XL,Blue,0.05
+P0137,Saree Slim Fit,Women,Saree,Zudio Home,Women,699,338.73,XXL,Pink,0.05
+P0138,Saree Regular Fit,Women,Saree,Zudio,Women,999,458.93,S,Red,0.05
+P0139,Saree Basic,Women,Saree,Zudio,Women,799,370.38,Free Size,White,0.05
+P0140,Saree Basic,Women,Saree,Zudio,Women,699,383.0,XL,Black,0.05
+P0141,Saree Slim Fit,Women,Saree,Zudio Basics,Women,349,179.86,Free Size,Grey,0.05
+P0142,Saree Slim Fit,Women,Saree,Zudio Home,Women,399,211.65,XL,Grey,0.05
+P0143,Saree Solid,Women,Saree,Zudio Basics,Women,199,99.11,L,White,0.05
+P0144,Saree Printed,Women,Saree,Zudio Home,Women,249,119.35,Free Size,Red,0.05
+P0145,Jeans Basic,Women,Jeans,Zudio Active,Women,1499,703.71,Free Size,Grey,0.12
+P0146,Jeans Slim Fit,Women,Jeans,Zudio Basics,Women,699,305.55,L,Blue,0.05
+P0147,Jeans Classic,Women,Jeans,Zudio,Women,349,141.29,Free Size,Grey,0.05
+P0148,Jeans Basic,Women,Jeans,Zudio Basics,Women,799,344.3,S,Black,0.05
+P0149,Jeans Printed,Women,Jeans,Zudio,Women,599,261.59,S,Grey,0.05
+P0150,Jeans Classic,Women,Jeans,Zudio Basics,Women,599,307.38,S,Blue,0.05
+P0151,Jeans Regular Fit,Women,Jeans,Zudio Basics,Women,699,365.14,Free Size,Green,0.05
+P0152,Jeans Printed,Women,Jeans,Zudio Active,Women,799,347.99,M,Red,0.05
+P0153,Jeans Regular Fit,Women,Jeans,Zudio Active,Women,499,204.16,XXL,Blue,0.05
+P0154,Jeans Solid,Women,Jeans,Zudio Home,Women,999,482.89,S,Green,0.05
+P0155,Jeans Solid,Women,Jeans,Zudio Home,Women,999,517.35,L,Grey,0.05
+P0156,T-Shirt Regular Fit,Kids,T-Shirt,Zudio Home,Kids,249,106.47,XXL,Pink,0.05
+P0157,T-Shirt Classic,Kids,T-Shirt,Zudio Active,Kids,299,158.06,M,Pink,0.05
+P0158,T-Shirt Printed,Kids,T-Shirt,Zudio Home,Kids,149,81.23,XXL,Blue,0.05
+P0159,T-Shirt Classic,Kids,T-Shirt,Zudio Active,Kids,499,214.82,Free Size,White,0.05
+P0160,T-Shirt Regular Fit,Kids,T-Shirt,Zudio,Kids,599,287.73,M,Black,0.05
+P0161,T-Shirt Slim Fit,Kids,T-Shirt,Zudio,Kids,349,185.33,M,Red,0.05
+P0162,T-Shirt Classic,Kids,T-Shirt,Zudio Active,Kids,599,266.84,S,Red,0.05
+P0163,T-Shirt Solid,Kids,T-Shirt,Zudio,Kids,299,153.1,XL,Red,0.05
+P0164,T-Shirt Printed,Kids,T-Shirt,Zudio Basics,Kids,1199,550.93,M,Green,0.12
+P0165,T-Shirt Regular Fit,Kids,T-Shirt,Zudio Home,Kids,1499,704.44,Free Size,Green,0.12
+P0166,T-Shirt Regular Fit,Kids,T-Shirt,Zudio Active,Kids,349,166.45,XL,Pink,0.05
+P0167,T-Shirt Solid,Kids,T-Shirt,Zudio Home,Kids,199,102.33,L,Red,0.05
+P0168,T-Shirt Regular Fit,Kids,T-Shirt,Zudio Home,Kids,399,162.34,M,Blue,0.05
+P0169,T-Shirt Regular Fit,Kids,T-Shirt,Zudio Home,Kids,149,66.2,M,Green,0.05
+P0170,Frock Printed,Kids,Frock,Zudio Basics,Kids,499,236.97,Free Size,Green,0.05
+P0171,Frock Slim Fit,Kids,Frock,Zudio Home,Kids,349,163.72,Free Size,Green,0.05
+P0172,Frock Classic,Kids,Frock,Zudio Home,Kids,249,106.47,XXL,Black,0.05
+P0173,Frock Basic,Kids,Frock,Zudio,Kids,699,378.7,Free Size,Black,0.05
+P0174,Frock Basic,Kids,Frock,Zudio Home,Kids,1499,630.51,Free Size,Red,0.12
+P0175,Frock Solid,Kids,Frock,Zudio Basics,Kids,199,79.87,XXL,Pink,0.05
+P0176,Frock Basic,Kids,Frock,Zudio Home,Kids,399,199.06,S,Black,0.05
+P0177,Frock Printed,Kids,Frock,Zudio Home,Kids,699,280.84,XXL,Beige,0.05
+P0178,Frock Regular Fit,Kids,Frock,Zudio,Kids,699,332.26,Free Size,Grey,0.05
+P0179,Frock Classic,Kids,Frock,Zudio,Kids,1499,806.02,XXL,Blue,0.12
+P0180,Frock Classic,Kids,Frock,Zudio Active,Kids,299,156.16,L,Grey,0.05
+P0181,Frock Regular Fit,Kids,Frock,Zudio Home,Kids,199,93.3,M,Red,0.05
+P0182,Shorts Basic,Kids,Shorts,Zudio,Kids,999,413.61,XL,Grey,0.05
+P0183,Shorts Slim Fit,Kids,Shorts,Zudio,Kids,699,346.36,Free Size,Blue,0.05
+P0184,Shorts Slim Fit,Kids,Shorts,Zudio Home,Kids,199,98.85,L,White,0.05
+P0185,Shorts Basic,Kids,Shorts,Zudio Basics,Kids,699,301.77,Free Size,Pink,0.05
+P0186,Shorts Basic,Kids,Shorts,Zudio,Kids,349,175.43,L,Black,0.05
+P0187,Shorts Regular Fit,Kids,Shorts,Zudio,Kids,249,135.51,XXL,Blue,0.05
+P0188,Shorts Solid,Kids,Shorts,Zudio Home,Kids,1499,808.46,L,Blue,0.12
+P0189,Shorts Classic,Kids,Shorts,Zudio Home,Kids,799,400.74,XXL,Green,0.05
+P0190,Shorts Solid,Kids,Shorts,Zudio Basics,Kids,499,258.77,Free Size,White,0.05
+P0191,Shorts Solid,Kids,Shorts,Zudio Active,Kids,699,285.23,XL,Red,0.05
+P0192,Shorts Regular Fit,Kids,Shorts,Zudio Home,Kids,199,108.52,L,Black,0.05
+P0193,Shorts Regular Fit,Kids,Shorts,Zudio Home,Kids,999,473.12,L,Grey,0.05
+P0194,Shorts Classic,Kids,Shorts,Zudio Home,Kids,499,206.01,XXL,Beige,0.05
+P0195,Nightwear Basic,Kids,Nightwear,Zudio,Kids,1199,527.79,XL,Blue,0.12
+P0196,Nightwear Slim Fit,Kids,Nightwear,Zudio Active,Kids,1199,544.47,S,Black,0.12
+P0197,Nightwear Slim Fit,Kids,Nightwear,Zudio Active,Kids,349,179.46,S,Blue,0.05
+P0198,Nightwear Classic,Kids,Nightwear,Zudio Home,Kids,199,93.0,XXL,Grey,0.05
+P0199,Nightwear Basic,Kids,Nightwear,Zudio,Kids,199,90.16,S,Green,0.05
+P0200,Nightwear Basic,Kids,Nightwear,Zudio Active,Kids,499,230.57,S,Red,0.05
+P0201,Nightwear Printed,Kids,Nightwear,Zudio Basics,Kids,799,401.74,M,Blue,0.05
+P0202,Nightwear Regular Fit,Kids,Nightwear,Zudio Active,Kids,349,165.42,S,Blue,0.05
+P0203,Nightwear Regular Fit,Kids,Nightwear,Zudio Home,Kids,499,222.04,S,Green,0.05
+P0204,Nightwear Classic,Kids,Nightwear,Zudio Home,Kids,349,170.69,M,Pink,0.05
+P0205,Nightwear Classic,Kids,Nightwear,Zudio Active,Kids,199,79.8,XL,Green,0.05
+P0206,Nightwear Slim Fit,Kids,Nightwear,Zudio Active,Kids,799,372.36,XL,Blue,0.05
+P0207,Bedsheet Printed,Home,Bedsheet,Zudio Basics,Unisex,399,188.27,M,Grey,0.12
+P0208,Bedsheet Regular Fit,Home,Bedsheet,Zudio Home,Unisex,399,217.52,M,Green,0.12
+P0209,Bedsheet Regular Fit,Home,Bedsheet,Zudio Home,Unisex,499,226.92,XXL,Red,0.12
+P0210,Bedsheet Printed,Home,Bedsheet,Zudio Basics,Unisex,799,401.3,XXL,Black,0.12
+P0211,Bedsheet Slim Fit,Home,Bedsheet,Zudio Basics,Unisex,1199,558.46,L,White,0.12
+P0212,Bedsheet Slim Fit,Home,Bedsheet,Zudio Home,Unisex,1499,630.89,L,Red,0.12
+P0213,Bedsheet Solid,Home,Bedsheet,Zudio Basics,Unisex,349,177.04,XL,White,0.12
+P0214,Bedsheet Printed,Home,Bedsheet,Zudio Home,Unisex,599,291.91,XXL,Grey,0.12
+P0215,Bedsheet Basic,Home,Bedsheet,Zudio Active,Unisex,699,353.17,XXL,White,0.12
+P0216,Bedsheet Classic,Home,Bedsheet,Zudio Active,Unisex,199,84.57,XXL,Black,0.12
+P0217,Bedsheet Solid,Home,Bedsheet,Zudio Home,Unisex,799,435.47,L,Grey,0.12
+P0218,Bedsheet Basic,Home,Bedsheet,Zudio,Unisex,199,87.32,XXL,Red,0.12
+P0219,Bedsheet Regular Fit,Home,Bedsheet,Zudio Home,Unisex,599,281.21,Free Size,Blue,0.12
+P0220,Cushion Cover Slim Fit,Home,Cushion Cover,Zudio,Unisex,149,66.2,S,White,0.12
+P0221,Cushion Cover Classic,Home,Cushion Cover,Zudio Active,Unisex,1199,535.69,XL,Red,0.12
+P0222,Cushion Cover Slim Fit,Home,Cushion Cover,Zudio Active,Unisex,699,329.53,XL,Pink,0.12
+P0223,Cushion Cover Basic,Home,Cushion Cover,Zudio Active,Unisex,399,162.27,Free Size,White,0.12
+P0224,Cushion Cover Regular Fit,Home,Cushion Cover,Zudio,Unisex,149,74.73,M,Red,0.12
+P0225,Cushion Cover Classic,Home,Cushion Cover,Zudio Basics,Unisex,699,314.3,XL,Pink,0.12
+P0226,Cushion Cover Slim Fit,Home,Cushion Cover,Zudio Basics,Unisex,299,127.96,Free Size,Grey,0.12
+P0227,Cushion Cover Basic,Home,Cushion Cover,Zudio Basics,Unisex,499,233.25,XL,Grey,0.12
+P0228,Cushion Cover Solid,Home,Cushion Cover,Zudio Basics,Unisex,149,64.2,Free Size,White,0.12
+P0229,Cushion Cover Basic,Home,Cushion Cover,Zudio Basics,Unisex,799,363.44,M,Pink,0.12
+P0230,Cushion Cover Regular Fit,Home,Cushion Cover,Zudio Home,Unisex,199,95.35,Free Size,Green,0.12
+P0231,Cushion Cover Slim Fit,Home,Cushion Cover,Zudio Home,Unisex,799,389.95,L,Green,0.12
+P0232,Cushion Cover Printed,Home,Cushion Cover,Zudio Basics,Unisex,599,312.71,Free Size,Beige,0.12
+P0233,Towel Classic,Home,Towel,Zudio Active,Unisex,999,417.26,L,White,0.12
+P0234,Towel Regular Fit,Home,Towel,Zudio Basics,Unisex,249,118.68,XL,Blue,0.12
+P0235,Towel Slim Fit,Home,Towel,Zudio Home,Unisex,799,341.86,Free Size,Blue,0.12
+P0236,Towel Classic,Home,Towel,Zudio Home,Unisex,699,309.88,M,Green,0.12
+P0237,Towel Printed,Home,Towel,Zudio,Unisex,599,317.37,S,Pink,0.12
+P0238,Towel Classic,Home,Towel,Zudio Home,Unisex,249,135.6,XXL,Pink,0.12
+P0239,Towel Solid,Home,Towel,Zudio Home,Unisex,499,230.71,XL,Pink,0.12
+P0240,Towel Basic,Home,Towel,Zudio,Unisex,249,129.33,M,Beige,0.12
+P0241,Towel Regular Fit,Home,Towel,Zudio Basics,Unisex,149,71.62,M,Pink,0.12
+P0242,Towel Solid,Home,Towel,Zudio Home,Unisex,799,385.48,S,White,0.12
+P0243,Towel Printed,Home,Towel,Zudio Active,Unisex,349,167.98,S,Pink,0.12
+P0244,Curtain Basic,Home,Curtain,Zudio Basics,Unisex,499,221.88,S,Pink,0.12
+P0245,Curtain Regular Fit,Home,Curtain,Zudio,Unisex,349,162.59,S,Red,0.12
+P0246,Curtain Solid,Home,Curtain,Zudio Active,Unisex,299,158.22,XXL,Grey,0.12
+P0247,Curtain Printed,Home,Curtain,Zudio Basics,Unisex,249,128.91,M,Black,0.12
+P0248,Curtain Regular Fit,Home,Curtain,Zudio Active,Unisex,799,391.13,M,Green,0.12
+P0249,Curtain Regular Fit,Home,Curtain,Zudio Active,Unisex,1199,582.61,XXL,White,0.12
+P0250,Curtain Slim Fit,Home,Curtain,Zudio,Unisex,249,136.67,Free Size,Blue,0.12
+P0251,Curtain Classic,Home,Curtain,Zudio Basics,Unisex,1199,505.9,L,Red,0.12
+P0252,Curtain Solid,Home,Curtain,Zudio Home,Unisex,1499,709.65,XXL,Beige,0.12
+P0253,Curtain Slim Fit,Home,Curtain,Zudio Home,Unisex,999,467.33,Free Size,White,0.12
+P0254,Curtain Printed,Home,Curtain,Zudio Active,Unisex,499,251.6,L,Pink,0.12
+P0255,Curtain Regular Fit,Home,Curtain,Zudio,Unisex,599,317.67,Free Size,White,0.12
+P0256,Sneakers Solid,Footwear,Sneakers,Zudio Active,Unisex,999,526.99,XXL,Grey,0.05
+P0257,Sneakers Slim Fit,Footwear,Sneakers,Zudio Basics,Unisex,299,141.79,L,Beige,0.05
+P0258,Sneakers Printed,Footwear,Sneakers,Zudio Basics,Unisex,399,193.48,XL,Green,0.05
+P0259,Sneakers Basic,Footwear,Sneakers,Zudio,Unisex,999,414.52,XL,Black,0.05
+P0260,Sneakers Classic,Footwear,Sneakers,Zudio Home,Unisex,199,93.23,XL,Red,0.05
+P0261,Sneakers Classic,Footwear,Sneakers,Zudio Active,Unisex,1199,508.19,L,White,0.18
+P0262,Sneakers Regular Fit,Footwear,Sneakers,Zudio Active,Unisex,999,411.95,Free Size,Blue,0.05
+P0263,Sneakers Slim Fit,Footwear,Sneakers,Zudio Active,Unisex,149,75.83,M,Grey,0.05
+P0264,Sneakers Basic,Footwear,Sneakers,Zudio,Unisex,999,399.76,XL,White,0.05
+P0265,Sneakers Printed,Footwear,Sneakers,Zudio Basics,Unisex,249,119.0,XL,Black,0.05
+P0266,Sneakers Solid,Footwear,Sneakers,Zudio Active,Unisex,149,77.86,XL,Blue,0.05
+P0267,Sneakers Basic,Footwear,Sneakers,Zudio Basics,Unisex,599,274.02,Free Size,White,0.05
+P0268,Sneakers Regular Fit,Footwear,Sneakers,Zudio Active,Unisex,199,105.9,M,Grey,0.05
+P0269,Sneakers Classic,Footwear,Sneakers,Zudio Basics,Unisex,1499,614.98,XXL,Black,0.18
+P0270,Sandals Regular Fit,Footwear,Sandals,Zudio Basics,Unisex,599,296.03,M,Grey,0.05
+P0271,Sandals Solid,Footwear,Sandals,Zudio Home,Unisex,799,422.67,S,White,0.05
+P0272,Sandals Basic,Footwear,Sandals,Zudio Home,Unisex,249,112.73,XL,Green,0.05
+P0273,Sandals Classic,Footwear,Sandals,Zudio Basics,Unisex,1499,661.88,S,Red,0.18
+P0274,Sandals Printed,Footwear,Sandals,Zudio Active,Unisex,699,361.27,Free Size,Black,0.05
+P0275,Sandals Regular Fit,Footwear,Sandals,Zudio Basics,Unisex,999,477.18,XXL,Red,0.05
+P0276,Sandals Slim Fit,Footwear,Sandals,Zudio Active,Unisex,1199,595.81,M,Pink,0.18
+P0277,Sandals Basic,Footwear,Sandals,Zudio Basics,Unisex,499,236.99,XXL,White,0.05
+P0278,Sandals Basic,Footwear,Sandals,Zudio Active,Unisex,699,377.52,M,Grey,0.05
+P0279,Sandals Slim Fit,Footwear,Sandals,Zudio Active,Unisex,799,385.08,M,Pink,0.05
+P0280,Sandals Basic,Footwear,Sandals,Zudio,Unisex,1499,731.67,S,Beige,0.18
+P0281,Sandals Basic,Footwear,Sandals,Zudio,Unisex,299,162.15,XL,Beige,0.05
+P0282,Flip-Flops Solid,Footwear,Flip-Flops,Zudio Home,Unisex,499,205.77,XXL,Blue,0.05
+P0283,Flip-Flops Basic,Footwear,Flip-Flops,Zudio Active,Unisex,349,143.74,M,Blue,0.05
+P0284,Flip-Flops Regular Fit,Footwear,Flip-Flops,Zudio Home,Unisex,699,341.09,Free Size,White,0.05
+P0285,Flip-Flops Solid,Footwear,Flip-Flops,Zudio Home,Unisex,349,177.81,M,Black,0.05
+P0286,Flip-Flops Basic,Footwear,Flip-Flops,Zudio Home,Unisex,299,124.8,XXL,Black,0.05
+P0287,Flip-Flops Solid,Footwear,Flip-Flops,Zudio Basics,Unisex,349,145.85,Free Size,Blue,0.05
+P0288,Flip-Flops Basic,Footwear,Flip-Flops,Zudio Basics,Unisex,1199,568.88,L,Beige,0.18
+P0289,Flip-Flops Regular Fit,Footwear,Flip-Flops,Zudio Basics,Unisex,249,127.6,L,White,0.05
+P0290,Flip-Flops Basic,Footwear,Flip-Flops,Zudio Active,Unisex,1499,781.08,L,White,0.18
+P0291,Flip-Flops Solid,Footwear,Flip-Flops,Zudio,Unisex,349,165.57,XXL,Green,0.05
+P0292,Flip-Flops Slim Fit,Footwear,Flip-Flops,Zudio Basics,Unisex,149,67.82,L,White,0.05
+P0293,Flip-Flops Solid,Footwear,Flip-Flops,Zudio,Unisex,799,346.97,XXL,Black,0.05
+P0294,Flip-Flops Basic,Footwear,Flip-Flops,Zudio Basics,Unisex,149,60.63,L,Grey,0.05
+P0295,Flip-Flops Classic,Footwear,Flip-Flops,Zudio,Unisex,249,120.25,Free Size,Grey,0.05
+P0296,Bag Classic,Accessories,Bag,Zudio Home,Unisex,399,214.41,L,Beige,0.12
+P0297,Bag Printed,Accessories,Bag,Zudio Active,Unisex,199,83.16,Free Size,Black,0.12
+P0298,Bag Classic,Accessories,Bag,Zudio,Unisex,249,135.23,S,Pink,0.12
+P0299,Bag Regular Fit,Accessories,Bag,Zudio Active,Unisex,349,144.12,XL,Black,0.12
+P0300,Bag Classic,Accessories,Bag,Zudio Active,Unisex,399,193.34,L,Red,0.12
+P0301,Bag Regular Fit,Accessories,Bag,Zudio Home,Unisex,599,329.25,M,Red,0.12
+P0302,Bag Basic,Accessories,Bag,Zudio Home,Unisex,249,100.49,XXL,Green,0.12
+P0303,Bag Solid,Accessories,Bag,Zudio,Unisex,999,542.11,S,Grey,0.12
+P0304,Bag Solid,Accessories,Bag,Zudio Active,Unisex,1199,498.3,XXL,Red,0.12
+P0305,Bag Slim Fit,Accessories,Bag,Zudio,Unisex,499,272.4,M,Beige,0.12
+P0306,Bag Basic,Accessories,Bag,Zudio Basics,Unisex,199,106.38,XXL,Grey,0.12
+P0307,Bag Regular Fit,Accessories,Bag,Zudio Home,Unisex,1199,654.87,S,White,0.12
+P0308,Belt Slim Fit,Accessories,Belt,Zudio,Unisex,999,488.3,S,Grey,0.12
+P0309,Belt Classic,Accessories,Belt,Zudio Basics,Unisex,999,443.31,L,Grey,0.12
+P0310,Belt Solid,Accessories,Belt,Zudio Active,Unisex,1199,536.8,L,Red,0.12
+P0311,Belt Classic,Accessories,Belt,Zudio Basics,Unisex,199,102.88,XXL,White,0.12
+P0312,Belt Basic,Accessories,Belt,Zudio Basics,Unisex,249,116.39,L,Grey,0.12
+P0313,Belt Printed,Accessories,Belt,Zudio Active,Unisex,199,108.39,M,Pink,0.12
+P0314,Belt Slim Fit,Accessories,Belt,Zudio Active,Unisex,349,184.23,S,Blue,0.12
+P0315,Belt Solid,Accessories,Belt,Zudio Active,Unisex,1499,785.41,Free Size,Black,0.12
+P0316,Belt Regular Fit,Accessories,Belt,Zudio Basics,Unisex,299,123.69,M,Green,0.12
+P0317,Belt Printed,Accessories,Belt,Zudio,Unisex,499,250.29,L,Blue,0.12
+P0318,Belt Slim Fit,Accessories,Belt,Zudio Home,Unisex,149,72.03,XXL,Red,0.12
+P0319,Belt Slim Fit,Accessories,Belt,Zudio,Unisex,199,103.6,M,White,0.12
+P0320,Cap Classic,Accessories,Cap,Zudio Basics,Unisex,149,64.03,XL,Green,0.12
+P0321,Cap Solid,Accessories,Cap,Zudio,Unisex,999,486.86,L,White,0.12
+P0322,Cap Basic,Accessories,Cap,Zudio Basics,Unisex,149,79.77,XL,Blue,0.12
+P0323,Cap Regular Fit,Accessories,Cap,Zudio,Unisex,199,80.87,XL,Black,0.12
+P0324,Cap Printed,Accessories,Cap,Zudio Home,Unisex,249,130.29,XL,Pink,0.12
+P0325,Cap Slim Fit,Accessories,Cap,Zudio Home,Unisex,149,63.46,M,Blue,0.12
+P0326,Cap Regular Fit,Accessories,Cap,Zudio Home,Unisex,349,185.85,S,Red,0.12
+P0327,Cap Regular Fit,Accessories,Cap,Zudio Home,Unisex,999,461.34,XXL,Pink,0.12
+P0328,Cap Basic,Accessories,Cap,Zudio Active,Unisex,149,68.16,XL,Red,0.12
+P0329,Cap Printed,Accessories,Cap,Zudio Basics,Unisex,999,494.12,XXL,Black,0.12
+P0330,Cap Solid,Accessories,Cap,Zudio Active,Unisex,499,235.5,XL,Green,0.12
+P0331,Socks Regular Fit,Accessories,Socks,Zudio Basics,Unisex,499,201.55,XXL,Red,0.12
+P0332,Socks Regular Fit,Accessories,Socks,Zudio,Unisex,149,77.67,XL,Green,0.12
+P0333,Socks Printed,Accessories,Socks,Zudio Basics,Unisex,1499,818.6,S,Red,0.12
+P0334,Socks Classic,Accessories,Socks,Zudio Active,Unisex,999,479.57,Free Size,Black,0.12
+P0335,Socks Classic,Accessories,Socks,Zudio Home,Unisex,1499,679.38,M,Blue,0.12
+P0336,Socks Printed,Accessories,Socks,Zudio Active,Unisex,299,155.76,Free Size,Green,0.12
+P0337,Socks Basic,Accessories,Socks,Zudio Active,Unisex,799,433.16,XXL,Blue,0.12
+P0338,Socks Classic,Accessories,Socks,Zudio Home,Unisex,799,384.57,M,Pink,0.12
+P0339,Socks Basic,Accessories,Socks,Zudio,Unisex,149,64.8,M,Black,0.12
+P0340,Socks Slim Fit,Accessories,Socks,Zudio,Unisex,699,314.38,XXL,Red,0.12
+P0341,Socks Classic,Accessories,Socks,Zudio Active,Unisex,1499,760.8,L,Black,0.12
+P0342,Socks Classic,Accessories,Socks,Zudio Basics,Unisex,149,76.91,XXL,Green,0.12
+P0343,Socks Regular Fit,Accessories,Socks,Zudio Home,Unisex,199,97.09,L,Beige,0.12

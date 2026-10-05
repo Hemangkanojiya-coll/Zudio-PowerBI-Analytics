@@ -1,0 +1,16 @@
+PaymentID,PaymentMode,Application,CardType,CardBank
+PM001,Cash,,,
+PM002,UPI,GPay,,
+PM003,UPI,PhonePe,,
+PM004,UPI,Paytm,,
+PM005,UPI,Other,,
+PM006,Card,,Visa,HDFC Bank
+PM007,Card,,Mastercard,HDFC Bank
+PM008,Card,,RuPay,HDFC Bank
+PM009,Card,,Visa,Axis Bank
+PM010,Card,,Mastercard,Axis Bank
+PM011,Card,,American Express,American Express
+PM012,Card,,RuPay,Tata Neu (RBL Bank)
+PM013,Online,Net Banking,,
+PM014,Online,BNPL,,
+PM015,Credit Note,,,

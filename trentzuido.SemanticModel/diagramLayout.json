@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "DimCustomer",
+          "nodeLineageTag": "d8de9934-c37c-4593-b8e3-1bc62e379d33",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 14
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "2cf2f784-e560-465d-bb2f-48b4d381e322",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 0
+          },
+          "nodeIndex": "DimProduct",
+          "nodeLineageTag": "59a7a3d6-72dc-48bf-93c1-1401cb193c32",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 0
+          },
+          "nodeIndex": "DimStore",
+          "nodeLineageTag": "45012f96-8554-4db6-b83b-f3161de41893",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 0
+          },
+          "nodeIndex": "FactExchange",
+          "nodeLineageTag": "0856fc52-9c20-4dd2-9c71-feb8a578cc7d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 247.1467410349594,
+            "y": 377.11748215791226
+          },
+          "nodeIndex": "FactSales",
+          "nodeLineageTag": "695d15a4-cce3-4d57-9515-a97e16e142fb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 540.62734792627248,
+            "y": 76.861719525385752
+          },
+          "nodeIndex": "Dimpayment",
+          "nodeLineageTag": "b0788413-9928-4e11-9460-60efc1c21af9",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1988,
+            "y": 98
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "970acd59-3b99-4c88-8d41-6c675279bd1b",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 35.723911128792125,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

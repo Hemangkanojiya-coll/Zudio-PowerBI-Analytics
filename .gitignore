@@ -1,0 +1,14 @@
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+# Power BI
+*.pbix
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment / secrets
+.env

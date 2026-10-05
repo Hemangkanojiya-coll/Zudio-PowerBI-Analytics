@@ -1,0 +1,180 @@
+table FactSales
+	lineageTag: 695d15a4-cce3-4d57-9515-a97e16e142fb
+
+	column InvoiceID
+		dataType: string
+		lineageTag: 7e13e190-a21e-47ad-85e6-a2c1db126752
+		summarizeBy: none
+		sourceColumn: InvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2958f437-86d0-478d-b699-67a0c8ed0f20
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column StoreID
+		dataType: string
+		lineageTag: d93446af-e9e6-4698-85f6-804b52f262bb
+		summarizeBy: none
+		sourceColumn: StoreID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: string
+		lineageTag: 7fc5abe2-6ce4-4f69-be01-bef20c068747
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: 5af4c904-fb68-4c59-9cd2-14992f0863f0
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c5dd0b3-af27-4a19-bccf-2ff69573a779
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column MRP
+		dataType: int64
+		formatString: 0
+		lineageTag: de12e298-1246-4e87-a74f-0d4ac3050cf4
+		summarizeBy: sum
+		sourceColumn: MRP
+
+		annotation SummarizationSetBy = Automatic
+
+	column GrossAmount
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b3599e4-fe88-47b3-87ef-ee32460e607d
+		summarizeBy: sum
+		sourceColumn: GrossAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountPct
+		dataType: int64
+		formatString: 0
+		lineageTag: 484c3a82-e0a9-424e-bbf0-a69f70574ca6
+		summarizeBy: sum
+		sourceColumn: DiscountPct
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountAmount
+		dataType: double
+		lineageTag: 1073abfe-0504-43a8-ab39-16580889424c
+		summarizeBy: sum
+		sourceColumn: DiscountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxableValue
+		dataType: double
+		lineageTag: d7cc2b76-249d-43bf-8104-50826aa94f63
+		summarizeBy: sum
+		sourceColumn: TaxableValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GSTRate
+		dataType: double
+		lineageTag: a4dd70b8-0026-4cdf-9e65-888f314311bc
+		summarizeBy: sum
+		sourceColumn: GSTRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CGST
+		dataType: double
+		lineageTag: 913cf6c8-1526-4e62-abfb-cdf07a40adc1
+		summarizeBy: sum
+		sourceColumn: CGST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SGST
+		dataType: double
+		lineageTag: 5f999cc7-21bb-4009-876d-d7dbd5c32e57
+		summarizeBy: sum
+		sourceColumn: SGST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalGST
+		dataType: double
+		lineageTag: 766464df-680f-4ba7-a9e2-10c7f1903dd3
+		summarizeBy: sum
+		sourceColumn: TotalGST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetSales
+		dataType: double
+		lineageTag: 21101ccf-702d-42a6-89a3-7c633b098c59
+		summarizeBy: sum
+		sourceColumn: NetSales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PaymentID
+		dataType: string
+		lineageTag: c0031b4f-4897-40a0-a422-db0e258b05e0
+		summarizeBy: none
+		sourceColumn: PaymentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditNoteNumber
+		dataType: string
+		lineageTag: b8563276-0f35-403d-bdb1-4e26f5c6d05a
+		summarizeBy: none
+		sourceColumn: CreditNoteNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactSales = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\program\Downloads\zudio_pro\FactSales.csv"),[Delimiter=",", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"InvoiceID", type text}, {"Date", type date}, {"StoreID", type text}, {"ProductID", type text}, {"CustomerID", type text}, {"Quantity", Int64.Type}, {"MRP", Int64.Type}, {"GrossAmount", Int64.Type}, {"DiscountPct", Int64.Type}, {"DiscountAmount", type number}, {"TaxableValue", type number}, {"GSTRate", type number}, {"CGST", type number}, {"SGST", type number}, {"TotalGST", type number}, {"NetSales", type number}, {"PaymentID", type text}, {"CreditNoteNumber", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

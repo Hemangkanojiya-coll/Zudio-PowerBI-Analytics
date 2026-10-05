@@ -1,0 +1,146 @@
+table DimCustomer
+	lineageTag: d8de9934-c37c-4593-b8e3-1bc62e379d33
+
+	column CustomerID
+		dataType: string
+		lineageTag: 20896587-f0e3-4e20-882e-80fa125a5afa
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: b0806a35-2f93-42d6-b9d2-c0cd065f56ff
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: dcfc9d3f-f315-47e3-ac8e-cc29b9e6e2b2
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 8eb9a4ca-718f-47fd-a624-855c512e9d56
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 5f222b67-8da6-4474-aa58-3684eef74bd4
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: int64
+		formatString: 0
+		lineageTag: ddef0d11-b7cb-4fee-82ef-32835fe0ad64
+		summarizeBy: sum
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 41a0dc52-6468-4960-91ce-7d7e9a067e69
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column MembershipTier
+		dataType: string
+		lineageTag: 42a28565-ac0d-4518-9403-2e1f6db45a93
+		summarizeBy: none
+		sourceColumn: MembershipTier
+
+		annotation SummarizationSetBy = Automatic
+
+	column SignupDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3597831d-2939-4f5c-9fde-e16397cfa079
+		summarizeBy: none
+		sourceColumn: SignupDate
+
+		variation Variation
+			isDefault
+			relationship: 8cdcd0ff-b71a-4269-9192-512962288599
+			defaultHierarchy: LocalDateTable_cd2eead0-2f3f-4525-bff5-d281bd92d855.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FirstPurchaseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dfdd2146-94da-4f9f-b670-5917102bdea5
+		summarizeBy: none
+		sourceColumn: FirstPurchaseDate
+
+		variation Variation
+			isDefault
+			relationship: dd83683a-a41b-471b-aa16-9f557eb9fc6a
+			defaultHierarchy: LocalDateTable_4bff328c-bb35-440d-9e7f-2bb2bf6a6df1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LastPurchaseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0d3d34f2-de2c-4dbb-9b64-b43a75184f54
+		summarizeBy: none
+		sourceColumn: LastPurchaseDate
+
+		variation Variation
+			isDefault
+			relationship: 8854de4e-08a7-4669-9dbd-9d0e6003c897
+			defaultHierarchy: LocalDateTable_dc18d9f6-1518-40e3-9432-4df9797dade4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column OrderCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 25a6f24d-4df7-47fc-8303-d6a2384cf5b7
+		summarizeBy: sum
+		sourceColumn: OrderCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerType
+		dataType: string
+		lineageTag: a78738b4-9b6a-4fe5-877f-ed757ca99245
+		summarizeBy: none
+		sourceColumn: CustomerType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCustomer = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\program\Downloads\zudio_pro\DimCustomer.csv"),[Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CustomerID", type text}, {"CustomerName", type text}, {"Gender", type text}, {"Age", Int64.Type}, {"City", type text}, {"Phone", Int64.Type}, {"Email", type text}, {"MembershipTier", type text}, {"SignupDate", type date}, {"FirstPurchaseDate", type date}, {"LastPurchaseDate", type date}, {"OrderCount", Int64.Type}, {"CustomerType", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

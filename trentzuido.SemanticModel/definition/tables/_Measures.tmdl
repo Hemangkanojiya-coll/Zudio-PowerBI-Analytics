@@ -1,0 +1,247 @@
+table _Measures
+	lineageTag: 970acd59-3b99-4c88-8d41-6c675279bd1b
+
+	measure 'Net Sales' = SUM(FactSales[NetSales])
+		formatString: "₹"#,0.00;#,0.00\ -"₹";"₹"#,0.00
+		lineageTag: fdd4baff-2c36-4e08-a2b8-76ecb810962d
+
+		annotation PBI_FormatHint = {"currencyCulture":"hi-IN"}
+
+	measure Orders = DISTINCTCOUNT(FactSales[InvoiceID])
+		formatString: 0
+		lineageTag: 91cc55ab-9765-4f24-9f72-95c819acb2a2
+
+	measure 'Avg Order Value' = DIVIDE([Net Sales], [Orders], 0)
+		lineageTag: c5802b4b-ccd5-4a1e-95c6-74187fb3eff5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Items Sold' = SUM(FactSales[Quantity])
+		formatString: 0
+		lineageTag: e6844270-4b06-4746-b10b-fbf81cebb591
+
+	measure 'HTML Complete Category Mix' = ```
+			
+			VAR GrandTotal = CALCULATE([Net Sales], ALLSELECTED(DimProduct[Category]))
+			
+			VAR HTML_Table = 
+			    ADDCOLUMNS(
+			        VALUES(DimProduct[Category]),
+			        "HTML_Code",
+			        VAR CurrentTotal = [Net Sales]
+			        VAR SharePct = ROUND(DIVIDE(CurrentTotal, GrandTotal, 0) * 100, 0)
+			        VAR CurrentCategory = DimProduct[Category]
+			        VAR BarColor = 
+			            SWITCH( CurrentCategory, 
+			                "Women", "#ff6b6b", 
+			                "Men", "#cddc39", 
+			                "Kids", "#5c7cfa", 
+			                "Beauty", "#c5a3ff", 
+			                "Accessories", "#c5a3ff", 
+			                "Home", "#ff9800", 
+			                "Footwear", "#00bcd4", 
+			                "#ffffff" 
+			            )
+			        RETURN 
+			        "<div style='display: flex; justify-content: space-between; margin-bottom: 8px; color: white; font-family: Segoe UI, sans-serif; font-size: 14px;'>
+			            <span>" & CurrentCategory & "</span>
+			            <span style='font-weight: bold;'>" & SharePct & "%</span>
+			        </div>
+			        <div style='background-color: #333333; border-radius: 10px; height: 8px; width: 100%; margin-bottom: 22px;'>
+			            <div style='background-color: " & BarColor & "; width: " & SharePct & "%; height: 100%; border-radius: 10px;'></div>
+			        </div>"
+			    )
+			
+			VAR BarsHTML = CONCATENATEX(HTML_Table, [HTML_Code], "")
+			
+			// Yahan 'position: sticky' ka jadoo hai
+			VAR FinalHTML = 
+			    "<div style='background-color: #121212; border-radius: 16px; box-shadow: 0px 8px 20px rgba(0,0,0,0.25); width: 100%; height: 100%; overflow-y: auto; position: relative;'>
+			        
+			        <!-- FIX TITLE (Sticky) -->
+			        <div style='position: sticky; top: 0; background-color: #121212; padding: 25px 25px 15px 25px; z-index: 10; border-radius: 16px 16px 0 0;'>
+			            <div style='color: white; font-family: Segoe UI, sans-serif; font-weight: normal; font-size: 20px; margin-bottom: 5px;'>Category mix</div>
+			            <div style='color: #888888; font-family: Segoe UI, sans-serif; font-size: 13px;'>Share of net sales</div>
+			        </div>
+			        
+			        <!-- SCROLL HONE WALI BARS -->
+			        <div style='padding: 0 25px 25px 25px;'>
+			            " & BarsHTML & "
+			        </div>
+			        
+			    </div>"
+			
+			RETURN FinalHTML
+			```
+		lineageTag: 1e323c97-ac96-4c03-be76-821875086217
+
+	measure 'Avg Sales per Store' = ```
+			
+			VAR AvgSales = DIVIDE(
+			    SUM(FactSales[NetSales]), 
+			    DISTINCTCOUNT(FactSales[StoreID]), 
+			    0
+			)
+			RETURN 
+			IF(
+			    AvgSales >= 10000000, 
+			        "₹ " & FORMAT(AvgSales / 10000000, "0.00") & " Cr",   
+			    IF(
+			        AvgSales >= 100000, 
+			            "₹ " & FORMAT(AvgSales / 100000, "0.00") & " L",     
+			        IF(
+			            AvgSales >= 1000, 
+			                "₹ " & FORMAT(AvgSales / 1000, "0.0") & " K",    
+			            "₹ " & FORMAT(AvgSales, "0")                         
+			        )
+			    )
+			)
+			```
+		lineageTag: b6fcb7b1-2399-47f7-9bfe-5f9e891bdac8
+
+	measure 'Avg Sales Card Text' = ```
+			
+			IF(
+			    [Avg Sales per Store] >= 10000000, 
+			        "₹ " & FORMAT([Avg Sales per Store] / 10000000, "0.00") & " Cr",
+			    IF(
+			        [Avg Sales per Store] >= 100000, 
+			            "₹ " & FORMAT([Avg Sales per Store] / 100000, "0.00") & " L",
+			        IF(
+			            [Avg Sales per Store] >= 1000, 
+			                "₹ " & FORMAT([Avg Sales per Store] / 1000, "0.0") & " K",
+			            "₹ " & FORMAT([Avg Sales per Store], "0")
+			        )
+			    )
+			)
+			```
+		formatString: 0
+		lineageTag: ab752ac2-07f6-4e2a-b0df-3f644df9bba1
+
+	measure 'Trend Avg Sales' = ```
+			
+			VAR CurrentVal = [Avg Sales Math]
+			VAR LastVal = CALCULATE([Avg Sales Math], PREVIOUSMONTH('DimDate'[Date]))
+			VAR Growth = DIVIDE(CurrentVal - LastVal, LastVal, 0)
+			
+			VAR Arrow = IF(Growth > 0, "▲ +", IF(Growth < 0, "▼ -", "▶ "))
+			VAR GrowthFormatted = FORMAT(ABS(Growth), "0.0%")
+			
+			RETURN 
+			Arrow & GrowthFormatted & " vs last month"
+			```
+		lineageTag: 47218c41-7c96-4bda-82f1-ca014d1c66eb
+
+	measure 'Avg Sales Math' = ```
+			
+			DIVIDE(
+			    SUM(FactSales[NetSales]), 
+			    DISTINCTCOUNT(FactSales[StoreID]), 
+			    0
+			)
+			```
+		lineageTag: 96f0a2e0-e456-482f-a23d-900139ca96db
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top Store Sales Math' =
+			
+			MAXX(VALUES(FactSales[StoreID]), CALCULATE(SUM(FactSales[NetSales])))
+		lineageTag: 9ef3fe2e-5831-443e-88fb-06b38c0abb0b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top Store Card Text' = ```
+			
+			IF(
+			    [Top Store Sales Math] >= 10000000, 
+			        "₹ " & FORMAT([Top Store Sales Math] / 10000000, "0.00") & " Cr",
+			    IF(
+			        [Top Store Sales Math] >= 100000, 
+			            "₹ " & FORMAT([Top Store Sales Math] / 100000, "0.0") & " L",
+			        IF(
+			            [Top Store Sales Math] >= 1000, 
+			                "₹ " & FORMAT([Top Store Sales Math] / 1000, "0.0") & " K",
+			            "₹ " & FORMAT([Top Store Sales Math], "0")
+			        )
+			    )
+			)
+			```
+		lineageTag: 4a2d420f-f254-4388-b2f5-24c705253343
+
+	measure 'Trend Top Store' = ```
+			
+			VAR CurrentVal = [Top Store Sales Math]
+			VAR LastVal = CALCULATE([Top Store Sales Math], PREVIOUSMONTH('DimDate'[Date]))
+			VAR Growth = DIVIDE(CurrentVal - LastVal, LastVal, 0)
+			
+			VAR Arrow = IF(Growth > 0, "▲ +", IF(Growth < 0, "▼ -", "▶ "))
+			VAR GrowthFormatted = FORMAT(ABS(Growth), "0.0%")
+			
+			RETURN 
+			Arrow & GrowthFormatted & " vs last month"
+			```
+		lineageTag: ada75767-feb0-42de-830f-2b9827642f06
+
+	measure 'Active SKUs Math' =
+			
+			DISTINCTCOUNT(FactSales[ProductID])
+		formatString: 0
+		lineageTag: 339077e3-fe26-462f-8e1f-63b20c52ea0e
+
+	measure 'Active SKUs Card Text' =
+			
+			FORMAT([Active SKUs Math], "#,##0")
+		lineageTag: 2256e9dd-23a5-4c60-9076-2ffd9cd857b8
+
+	measure 'Trend Active SKUs' = ```
+			
+			VAR CurrentVal = [Active SKUs Math]
+			VAR LastVal = CALCULATE([Active SKUs Math], PREVIOUSMONTH('DimDate'[Date]))
+			VAR Growth = DIVIDE(CurrentVal - LastVal, LastVal, 0)
+			
+			VAR Arrow = IF(Growth > 0, "▲ +", IF(Growth < 0, "▼ -", "▶ "))
+			VAR GrowthFormatted = FORMAT(ABS(Growth), "0.0%")
+			
+			RETURN 
+			Arrow & GrowthFormatted & " vs last month"
+			```
+		lineageTag: ae8ff44f-bfec-4131-868c-bc949dcead67
+
+	measure 'Total Stores Math' =
+			
+			DISTINCTCOUNT(FactSales[StoreID])
+		formatString: 0
+		lineageTag: f66fc2cc-ee65-44d4-9b5c-c365e67f4208
+
+	measure 'Total Stores Card Text' =
+			
+			FORMAT([Total Stores Math], "#,##0")
+		lineageTag: 45a0f83a-8960-4427-80d8-2690b28c1bdc
+
+	measure 'Trend Total Stores' = ```
+			
+			VAR CurrentVal = [Total Stores Math]
+			VAR LastVal = CALCULATE([Total Stores Math], PREVIOUSMONTH('DimDate'[Date]))
+			VAR Growth = DIVIDE(CurrentVal - LastVal, LastVal, 0)
+			
+			VAR Arrow = IF(Growth > 0, "▲ +", IF(Growth < 0, "▼ -", "▶ "))
+			VAR GrowthFormatted = FORMAT(ABS(Growth), "0.0%")
+			
+			RETURN 
+			Arrow & GrowthFormatted & " vs last month"
+			```
+		lineageTag: 90bd3c4d-a267-42af-9d56-8efbf377f72b
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

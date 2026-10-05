@@ -1,0 +1,133 @@
+table FactExchange
+	lineageTag: 0856fc52-9c20-4dd2-9c71-feb8a578cc7d
+
+	column ExchangeID
+		dataType: string
+		lineageTag: e4653141-bbba-4638-bf61-edbb05e6f3ee
+		summarizeBy: none
+		sourceColumn: ExchangeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginalInvoiceID
+		dataType: string
+		lineageTag: 9eecd3f8-53b2-4032-aa10-d8d68608a2a7
+		summarizeBy: none
+		sourceColumn: OriginalInvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExchangeDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e3926d83-ed57-4022-a23a-fd5ad3b31723
+		summarizeBy: none
+		sourceColumn: ExchangeDate
+
+		variation Variation
+			isDefault
+			relationship: 58eb9428-dc34-4cd4-93ff-2dadd2ce5f05
+			defaultHierarchy: LocalDateTable_d1c4aadf-242c-43c7-8e7b-1ad68cf92711.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column StoreID
+		dataType: string
+		lineageTag: 99639541-01c6-4267-97d2-463208a6255e
+		summarizeBy: none
+		sourceColumn: StoreID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: a2ca6346-1aef-4061-bccc-3e755f73f870
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OldProductID
+		dataType: string
+		lineageTag: 3e1b7f5c-efc0-4a5a-92dc-c71daed69da2
+		summarizeBy: none
+		sourceColumn: OldProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NewProductID
+		dataType: string
+		lineageTag: ad233274-e750-4934-9eca-5d6f14e37548
+		summarizeBy: none
+		sourceColumn: NewProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OldAmount
+		dataType: double
+		lineageTag: 6b879f2e-4482-4f23-b7a7-7ab35af2e92e
+		summarizeBy: sum
+		sourceColumn: OldAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NewAmount
+		dataType: int64
+		formatString: 0
+		lineageTag: ac5d0724-cf88-4c63-a489-5512172502fc
+		summarizeBy: sum
+		sourceColumn: NewAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExchangeDifference
+		dataType: double
+		lineageTag: 09225cad-8a5c-405d-affc-1457a97d8123
+		summarizeBy: sum
+		sourceColumn: ExchangeDifference
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ExchangeReason
+		dataType: string
+		lineageTag: 23443ad1-3d0a-4047-94fb-3bb94e78012d
+		summarizeBy: none
+		sourceColumn: ExchangeReason
+
+		annotation SummarizationSetBy = Automatic
+
+	column SettlementMode
+		dataType: string
+		lineageTag: 5d164465-d05f-406f-8e77-fc54f681419d
+		summarizeBy: none
+		sourceColumn: SettlementMode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExchangeDaysFromPurchase
+		dataType: int64
+		formatString: 0
+		lineageTag: 7675d539-fc95-4153-8185-67732156fb76
+		summarizeBy: sum
+		sourceColumn: ExchangeDaysFromPurchase
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactExchange = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\program\Downloads\zudio_pro\FactExchange.csv"),[Delimiter=",", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ExchangeID", type text}, {"OriginalInvoiceID", type text}, {"ExchangeDate", type date}, {"StoreID", type text}, {"CustomerID", type text}, {"OldProductID", type text}, {"NewProductID", type text}, {"OldAmount", type number}, {"NewAmount", Int64.Type}, {"ExchangeDifference", type number}, {"ExchangeReason", type text}, {"SettlementMode", type text}, {"ExchangeDaysFromPurchase", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
